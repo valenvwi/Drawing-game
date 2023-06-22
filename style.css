@@ -1,15 +1,26 @@
 #canvas{
   border:2px solid gray;
   background-color:white;
-  width: 500px;
-  height: 300px;
 }
 
 
 body {
   text-align: center;
+  background-color: #FFEEB3;
+  color: #9E6F21;
+  font-family: Sans-serif;
 }
 
 #changeTopic {
   display: none;
+}
+
+button {
+  border-radius: 5px;
+  background-color: #cdf9fc;
+  border-color:#6eefde;
+  width: 150px;
+  height: 30px;
+  color: #966515;
+  font-size: 16px;
 }
