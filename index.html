@@ -9,8 +9,10 @@
 <body>
 
   <h1>Drawing Contest</h1>
-  <p></p>Try to draw your favorite animal as fast as possible. Save the drawing and share with your friends!</p>
-
+  <p></p>Save the drawing and share with your friends!</p>
+  <button onclick="showTopic()" id="showTopic">Let's start!</button>
+  <button onclick="changeTopic()" id="changeTopic">Change topic</button>
+  <h3 id="topic"> </h3>
   <p>
     Set width:
     <input type="Text" onchange="setWidth(value)" >
@@ -28,7 +30,7 @@
     <output id="sizeOutput"> 20 </output>
   </p>
   <p>Change background color:
-    <input type = "color" value = "#001A57" onchange="changebgcolor()" id="bgcolor">
+    <input type = "color" value = "#001A57" onchange="changeBgColor()" id="bgcolor">
   </p>
 
   <p>
