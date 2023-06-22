@@ -7,16 +7,17 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-
   <h1>Drawing Contest</h1>
-  <p></p>Save the drawing and share with your friends!</p>
+  <h4>Save the drawing and share with your friends!</h4>
   <button onclick="showTopic()" id="showTopic">Let's start!</button>
   <button onclick="changeTopic()" id="changeTopic">Change topic</button>
   <h3 id="topic"> </h3>
   <p>
-    Set width:
+    Change width:
     <input type="Text" onchange="setWidth(value)" >
-    Set height:
+  </p>
+  <p>
+    Change height:
     <input type="Text" onchange="setHeight(value)"  >
   </p>
 
@@ -34,7 +35,7 @@
   </p>
 
   <p>
-    <input type="button" value="Clear" id="clear" onclick="clearCanvas()">
+    <button id="clear" onclick="clearCanvas()">Clear</button>
     <div>
       <button onclick="saveImage()">Save as image</button>
   </div>
