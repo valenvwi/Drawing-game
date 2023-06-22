@@ -3,6 +3,8 @@ const context = paintcanvas.getContext("2d");
 var color = 'black';
 var radius = 20;
 var isPainting = false;
+const topic = document.getElementById("topic");
+let topics = ["lake", "venus", "programming", "raincoat", "ovomaltine", "stand-up paddle", "snowhite", "korean drama"]
 
 function setWidth (value) {
   if (isNumeric(value)) paintcanvas.width = value;
@@ -45,7 +47,7 @@ function resizeBrush(newSize){
   newSize=document.getElementById("sizeOutput").value;
 }
 
-function changebgcolor(){
+function changeBgColor(){
   var color=document.getElementById("bgcolor");
   canvas.style.backgroundColor = color.value;
 }
@@ -67,4 +69,22 @@ function saveImage(){
     link.href = image;
     link.click();
   }
+}
+
+function showTopic() {
+  topic.innerHTML = "Topic: fried rice";
+  showTopicElement = document.getElementById("showTopic");
+  changeTopicElement = document.getElementById("changeTopic");
+  showTopicElement.style.display = "none";
+  changeTopicElement.style.display = "inline-block";
+}
+
+function changeTopic() {
+  const currenttopic = topic.innerHTML;
+  const randomIndex = Math.floor(Math.random() * topics.length);
+  if (currenttopic != `Topic: ${topics[randomIndex]}`) {
+    topic.innerHTML = `Topic: ${topics[randomIndex]}`;
+  } else {
+    changeTopic()
+  };
 }
