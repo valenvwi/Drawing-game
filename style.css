@@ -1,8 +1,20 @@
-#canvas{
+#canvas1{
   border:2px solid gray;
   background-color:white;
+  display:block;
+  margin: auto;
 }
 
+#canvas2{
+  border:2px solid gray;
+  background-color:white;
+  display: none;
+  margin:auto;
+}
+
+#original {
+  display: none;
+}
 
 body {
   text-align: center;
@@ -23,4 +35,9 @@ button {
   height: 30px;
   color: #966515;
   font-size: 16px;
+  margin: 5px auto;
+}
+
+#modifybrush{
+  display: inline-block;
 }

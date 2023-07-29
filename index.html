@@ -3,43 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Drawing Contest</title>
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
   <h1>Drawing Contest</h1>
   <h4>Save the drawing and share with your friends!</h4>
-  <button onclick="showTopic()" id="showTopic">Let's start!</button>
-  <button onclick="changeTopic()" id="changeTopic">Change topic</button>
+  <button id="showTopic">Let's start!</button>
+  <button id="changeTopic">Change topic</button>
   <h3 id="topic"> </h3>
   <p>
     Change width:
-    <input type="Text" onchange="setWidth(value)" >
+    <input type="Text" id="textWidth" >
   </p>
   <p>
     Change height:
-    <input type="Text" onchange="setHeight(value)"  >
+    <input type="Text" id="textHeight" >
   </p>
 
-  <canvas id="canvas" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX,event.offsetY)" onmouseup="endPaint()"></canvas>
-
-  <p>
+  <canvas id="canvas1"></canvas>
+  <canvas id="canvas2"></canvas>
+  <p id="modifybrush">
     Brush color:
-    <input type="color" value="#0000" onchange="setColor(this.value)">
+    <input type="color" value="#0000" id="color">
     Brush size:
-    <input type = "range" id="sizeInput" min="1" max="20" value="20" oninput="resizeBrush(this.value)">
+    <input type = "range" id="sizeInput" min="1" max="20" value="20">
     <output id="sizeOutput"> 20 </output>
   </p>
   <p>Change background color:
-    <input type = "color" value = "#001A57" onchange="changeBgColor()" id="bgcolor">
+    <input type = "color" value = "#001A57" id="bgColor">
   </p>
-
-  <p>
-    <button id="clear" onclick="clearCanvas()">Clear</button>
     <div>
-      <button onclick="saveImage()">Save as image</button>
+      <button id="clear">Clear</button>
+    </div>
+    <div>
+      <button id="colorful">Colorful mode</button>
+    </div>
+    <div>
+      <button id="original">Original mode</button>
+    </div>
+    <div>
+      <button id="save">Save as image</button>
   </div>
-  </p>
   <script src="index.js"></script>
 </body>
 </html>
